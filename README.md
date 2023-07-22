@@ -8,3 +8,4 @@ The system in this example consists of an inverted pendulum mounted to a cart sl
 So, we would start first with the dynamics of the system : 
 
 We go with the basic free body diagram to write the NLM equations :
+![Free-body](https://github.com/AniketMessiBeast/InvertedPendulum/assets/106831571/bea23864-cf71-442e-b82c-b3277b66f94d)
