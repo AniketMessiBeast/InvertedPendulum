@@ -6,11 +6,11 @@ The inverted pendulum is a classic problem in control theory and robotics, exemp
 Techniques such as PID (Proportional-Integral-Derivative) control, state-space control, and modern control methods like LQR (Linear Quadratic Regulator) or adaptive control are employed to address the system's complexities. These methods adjust the input forces or torques to the system based on real-time measurements of the pendulum's angle and angular velocity, aiming to minimize deviations from the desired upright position.
 
 ## Mathematical Analysis of Sliding Model of Inverted Pendulum
-The system in our case consists of an inverted pendulum mounted to a cart sliding over a belt controlled by a stepper motor. The upright position of the pendulum is precarious without control, that is, it will simply fall over if the cart isn't moved to balance it. Additionally, the dynamics of the system are non-linear. The objective of the control system is to balance the inverted pendulum by applying a force to the cart to which the pendulum is attached. 
+The system in our case consists of an inverted pendulum mounted to a cart sliding over a belt controlled by a stepper motor. The upright position of the pendulum is precarious without control, that is, it will simply fall over if the cart isn't moved to balance it. 
  
 ![Slider](https://github.com/AniketMessiBeast/InvertedPendulum/assets/106831571/f161e7df-f687-446f-badd-2231419d65e7) 
 
-So, we would start first with the dynamics of the system : 
+So, we would start first with the general dynamics of the system : 
 
 We go with the basic free-body diagram to write the NLM equations,
 
