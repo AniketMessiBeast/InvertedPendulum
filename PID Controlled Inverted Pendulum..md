@@ -8,13 +8,14 @@ The `proportional` term responds to the current angle of deviation from the vert
 and the `derivative` term  predicts future error by evaluating the rate of change of the angle. By tuning these three parameters, the PID controller can provide a balanced corrective force to
 counteract disturbances and achieve a desired dynamic response.
 
-u = k<sub>p</sub> * error + k<sub>d</sub> * \[\frac{d(\text{error})}{dt}\] + k<sub>i</sub> * ∫ θ dt
+u = k<sub>p</sub> * θ + k<sub>d</sub> * θ̇   + k<sub>i</sub> * ∫ θ dt
 
-where, **u** is the control input to the motor as an analog signal (PWM).
+where, **u** is the control input to the motor as an analog signal (PWM).<br>
+NOTE : θ is the error term. Actually the reference angle which the IMU is calculating at the upright position must be **calibrated to 0**. Now, in reference to that, the
+input θ from the IMU sensor will be simply the error or deviation from the reference or target angle.<br>
+
 
 Now, this is an analog controller. To fit it into a microcontroller, we have to dicretize this controller. The following paragraphs would be about the discretization.
-NOTE : θ is the error term. Actually the reference angle which the IMU is calculating at the upright position must be **calibrated to 0**. Now, in reference to that, the
-input θ from the IMU sensor will be simply the error or deviation from the reference or target angle.
 
 **Derivative term Dicretization**
 
