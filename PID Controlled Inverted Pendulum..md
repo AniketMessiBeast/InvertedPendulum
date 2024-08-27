@@ -36,5 +36,5 @@ Since \(\Delta t\) is sampling time which is constant, it can be absorbed into t
 K<sub>i</sub> * ∑ θ
 
 So, the microcontroller based PID code would have the logic of : <br>
-`u = k<sub>p</sub> * θ(t) + k<sub>d</sub> * (θ(t) - θ(t-1)) + k<sub>i</sub> * ∑ θ`
+u = k<sub>p</sub> * θ(t) + k<sub>d</sub> * (θ(t) - θ(t-1)) + k<sub>i</sub> * ∑ θ
 
