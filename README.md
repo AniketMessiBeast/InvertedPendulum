@@ -1,13 +1,13 @@
 # InvertedPendulum
-I am a Bachelor student aiming to design and explore various controllers to control an unstable Inverted pendulum position
+I am a Bachelor student aiming to design and self-explore various controllers to control an unstable Inverted pendulum position.
 
-The system in this example consists of an inverted pendulum mounted to a cart sliding over a belt controlled by a stepper motor .The fact is the upright position of pendulum is very unstable without control, that is, the pendulum will simply fall over if the cart isn't moved to balance it. Additionally, the dynamics of the system are non-linear. The objective of the control system is to balance the inverted pendulum by applying a force to the cart that the pendulum is attached to. 
+The system in this example consists of an inverted pendulum mounted to a cart sliding over a belt controlled by a stepper motor. The upright position of the pendulum is precarious without control, that is, it will simply fall over if the cart isn't moved to balance it. Additionally, the dynamics of the system are non-linear. The objective of the control system is to balance the inverted pendulum by applying a force to the cart to which the pendulum is attached. 
  
 ![Slider](https://github.com/AniketMessiBeast/InvertedPendulum/assets/106831571/f161e7df-f687-446f-badd-2231419d65e7) 
 
 So, we would start first with the dynamics of the system : 
 
-We go with the basic free body diagram to write the NLM equations,
+We go with the basic free-body diagram to write the NLM equations,
 
 ![Free-body](https://github.com/AniketMessiBeast/InvertedPendulum/assets/106831571/bea23864-cf71-442e-b82c-b3277b66f94d)
 
@@ -36,3 +36,5 @@ $$q=[(M+m)(I+ml^2)-(ml)^2]$$
 From the transfer function above it can be seen that there is both a pole and a zero at the origin. These can be canceled and the transfer function becomes the following.
 
 $$P_{pend}(s) = \frac{\Phi(s)}{U(s)}=\frac{\frac{ml}{q}s}{s^3+\frac{b(I+ml^2)}{q}s^2-\frac{(M+m)mgl}{q}s-\frac{bmgl}{q}} \qquad [ \frac{rad}{N}]$$
+
+`After various simulations, to simplify the task, we jumped to the PID Controlled method of balancing the Pendulum.`
