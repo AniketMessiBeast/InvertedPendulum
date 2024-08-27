@@ -8,9 +8,9 @@ The `proportional` term responds to the current angle of deviation from the vert
 and the `derivative` term  predicts future error by evaluating the rate of change of the angle. By tuning these three parameters, the PID controller can provide a balanced corrective force to
 counteract disturbances and achieve a desired dynamic response.
 
-u = k<sub>p</sub> * θ + k<sub>d</sub> * θ̇   + k<sub>i</sub> * ∫ θ dt
+pwm = k<sub>p</sub> * θ + k<sub>d</sub> * θ̇   + k<sub>i</sub> * ∫ θ dt
 
-where, **u** is the control input to the motor as an analog signal (PWM).<br>
+where, **pwm** is the control input to the motor as an analog signal (PWM).<br>
 NOTE : θ is the error term. Actually the reference angle which the IMU is calculating at the upright position must be **calibrated to 0**. Now, in reference to that, the
 input θ from the IMU sensor will be simply the error or deviation from the reference or target angle.<br>
 
@@ -36,5 +36,7 @@ Since \(\Delta t\) is sampling time which is constant, it can be absorbed into t
 K<sub>i</sub> * ∑ θ
 
 So, the microcontroller based PID code would have the logic of : <br>
-u = k<sub>p</sub> * θ(t) + k<sub>d</sub> * (θ(t) - θ(t-1)) + k<sub>i</sub> * ∑ θ
+pwm(t) = k<sub>p</sub> * θ(t) + k<sub>d</sub> * (θ(t) - θ(t-1)) + k<sub>i</sub> * ∑ θ(t)
+
+Then, analogWrite(pwm(t)) to the motor.
 
