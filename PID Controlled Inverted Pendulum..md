@@ -7,3 +7,6 @@ proportional (P), integral (I), and derivative (D).
 The `proportional` term responds to the current angle of deviation from the vertical position, the `integral` term accounts for the accumulation of past errors to eliminate steady-state offset, 
 and the `derivative` term  predicts future error by evaluating the rate of change of the angle. By tuning these three parameters, the PID controller can provide a balanced corrective force to
 counteract disturbances and achieve a desired dynamic response.
+
+u = k<sub>p</sub> * θ + k<sub>d</sub> * θ̇ + k<sub>i</sub> * ∫ θ dt
+
