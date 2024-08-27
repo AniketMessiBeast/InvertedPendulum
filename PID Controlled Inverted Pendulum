@@ -1,0 +1,2 @@
+A **PID (Proportional-Integral-Derivative) controlled inverted pendulum** is a classical problem in control theory, widely used to demonstrate the effectiveness of feedback control systems. 
+The inverted pendulum system consists of a rod (pendulum) pivoted at its base, where the objective is to maintain the rod in an upright position despite gravitational forces pulling it downward.
