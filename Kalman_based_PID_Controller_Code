@@ -112,8 +112,8 @@ void loop() {
       if(-KalmanAnglePitch>0)
        {       
         analogWrite(en1,pwm);
-//        digitalWrite(in1,LOW);
-//        digitalWrite(in2,HIGH);
+//        #digitalWrite(in1,LOW);
+//        #digitalWrite(in2,HIGH);
         digitalWrite(in1,HIGH);
         digitalWrite(in2,LOW);
        }
