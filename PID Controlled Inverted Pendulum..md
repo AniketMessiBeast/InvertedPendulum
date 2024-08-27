@@ -10,3 +10,4 @@ counteract disturbances and achieve a desired dynamic response.
 
 u = k<sub>p</sub> * θ + k<sub>d</sub> * θ̇ + k<sub>i</sub> * ∫ θ dt
 
+where, **u** is the input to the motor as an analog signal (PWM).
