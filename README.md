@@ -3,7 +3,6 @@ I am a Bachelor's student aiming to design and self-explore various controllers 
 
 ## Abstract
 The inverted pendulum is a classic problem in control theory and robotics, exemplifying the challenges of maintaining stability in dynamic systems. The system consists of a rod mounted on a pivot or a moving base, where the goal is to keep the pendulum balanced in an upright position despite the force of gravity. This problem is fundamental in the study of control systems due to its non-linear dynamics and the requirement for precise control to achieve stability. <be>
-Techniques such as PID (Proportional-Integral-Derivative) control, state-space control, and modern control methods like LQR (Linear Quadratic Regulator) or adaptive control are employed to address the system's complexities. These methods adjust the input forces or torques to the system based on real-time measurements of the pendulum's angle and angular velocity, aiming to minimize deviations from the desired upright position.
 
 ## Mathematical Analysis of Sliding Model of Inverted Pendulum
 The system in our case consists of an inverted pendulum mounted to a cart sliding over a belt controlled by a stepper motor. The upright position of the pendulum is precarious without control, that is, it will simply fall over if the cart isn't moved to balance it. 
